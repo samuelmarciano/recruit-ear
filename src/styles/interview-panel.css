@@ -1,0 +1,71 @@
+html,
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.25rem;
+  background-color: #f5f5f5;
+}
+
+.suggestion-card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  margin-bottom: 16px;
+  transition: transform 0.2s;
+  width: 100%; /* Full width */
+  align-self: flex-start;
+  animation: cloudAppear 0.5s ease-out; /* Apply the animation */
+}
+
+.suggestion-card.recruiter {
+  background-color: #dcf8c6;
+  align-self: flex-end;
+}
+
+.suggestion-card:hover {
+  transform: translateY(-4px);
+}
+
+.suggestion-title {
+  display: none; /* Hide the suggestion title */
+}
+
+.suggestion-content {
+  font-size: 1rem;
+  color: #555555;
+}
+
+.recording-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.recording-button.recording {
+  background-color: #28a745; /* Green when recording */
+}
+
+.recording-button.not-recording {
+  background-color: #dc3545; /* Red when not recording */
+}
+
+@keyframes cloudAppear {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
